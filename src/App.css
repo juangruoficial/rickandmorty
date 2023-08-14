@@ -1,5 +1,8 @@
 body {
   background-color: black;
+}
+
+.main {
   padding: 1rem;
 }
 
@@ -14,6 +17,15 @@ body {
   top: -150px;
   position: relative;
   margin: 0 auto;
+  animation: rotateRight 6s infinite linear;
+}
+@keyframes rotateRight {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .name-img {
@@ -21,4 +33,15 @@ body {
   top: -250px;
   position: relative;
   margin: 0 auto;
+  animation: zoomInOut 5s infinite alternate;
+}
+
+@keyframes zoomInOut {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
 }

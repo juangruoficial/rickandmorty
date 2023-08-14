@@ -1,12 +1,12 @@
 .location-info {
-  min-width: 300px;
-  max-width: 800px;
+  width: 70%;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 0.8rem;
-  padding: 0.8rem;
+  padding: 1rem;
   border: 2px solid #8eff8b;
   margin: 0 auto;
 }

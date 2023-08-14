@@ -1,21 +1,14 @@
 .wrapper-form {
   display: flex;
   flex-direction: column;
+  min-width: 300px;
+  max-width: 1024px;
 
   justify-content: center;
   align-items: center;
   margin: 0 auto;
   padding: 1rem;
   gap: 1rem;
-  min-width: 300px;
-  max-width: 800px;
-}
-
-.form {
-  display: flex;
-  border: 2px solid #8eff8b;
-  width: 60%;
-  height: 30px;
 }
 
 .welcome-text {
@@ -24,6 +17,7 @@
   opacity: 0;
   position: relative;
   animation: textAppear 1s forwards ease-in-out;
+  font-size: 0.8rem;
 }
 
 @keyframes textAppear {
@@ -33,6 +27,7 @@
 }
 
 .letter {
+  color: #8eff8b;
   display: inline-block;
   opacity: 0;
   transform: translateY(-20px);
@@ -46,12 +41,18 @@
   }
 }
 
-.form-input {
-  background-color: transparent;
+.form {
+  display: flex;
+  border: 2px solid #8eff8b;
+  height: 50px;
+  width: 300px;
+}
 
+.form-input {
+  width: 70%;
+  background-color: transparent;
   padding: 0.5rem;
-  width: 65%;
-  font-size: 0.7rem;
+  font-size: 0.5rem;
 }
 
 .form-button {
@@ -69,4 +70,23 @@
 }
 .search-icon {
   width: 15px;
+}
+
+@media (min-width: 600px) {
+  .welcome-text {
+    padding: 1rem;
+  }
+
+  .form {
+    width: 550px;
+  }
+
+  .form-input,
+  .form-button p {
+    font-size: 1rem;
+  }
+
+  .search-icon {
+    width: 25px;
+  }
 }

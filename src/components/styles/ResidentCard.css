@@ -80,7 +80,7 @@
 
 .resident-list {
   display: flex;
-  justify-content: space-between;
+  gap: 0.4rem;
 }
 
 .resident-info-p {
@@ -93,4 +93,32 @@
 .resident-info-bold {
   color: #938686;
   width: 50%;
+}
+
+@media (min-width: 600px) {
+  .residents-list {
+    grid-template-columns: repeat(auto-fill, 200px);
+  }
+
+  .wrapper-status {
+    top: 150px;
+    right: 55px;
+    font-size: 1rem;
+    background: rgba(2, 10, 2, 0.8);
+    height: 20px;
+    padding: 1rem;
+  }
+
+  .resident-info-name {
+    height: 50px;
+    font-size: 1.3rem;
+  }
+
+  .resident-info-bold {
+    font-size: 1rem;
+  }
+
+  .resident-info-p {
+    font-size: 1rem;
+  }
 }

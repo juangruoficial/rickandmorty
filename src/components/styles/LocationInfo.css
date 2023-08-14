@@ -1,6 +1,6 @@
 .location-info {
   width: 70%;
-
+  text-overflow: ellipsis;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -13,13 +13,18 @@
   margin-bottom: 2rem;
 }
 
-.location-name {
+.location-info-title {
   font-size: 1rem;
+}
+
+.location-name {
+  font-size: 0.7rem;
 }
 
 .wrapper-info-location {
   display: flex;
-  width: 90%;
+  flex-direction: column;
+  width: 100%;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -27,6 +32,18 @@
 }
 
 .wrapper-info-location > li {
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   width: 33%;
+}
+
+@media (min-width: 600px) {
+  .wrapper-info-location {
+    flex-direction: row;
+  }
+
+  .location-name,
+  .location-info-title,
+  .wrapper-info-location > li {
+    font-size: 1.3rem;
+  }
 }

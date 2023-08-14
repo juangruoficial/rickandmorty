@@ -26,6 +26,7 @@
 }
 
 .activePage {
+  border-radius: 90px;
   height: 40px;
   background-color: rgba(143, 255, 139, 0.202);
 }

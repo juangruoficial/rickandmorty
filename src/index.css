@@ -3,7 +3,7 @@
   margin: 0;
   box-sizing: border-box;
   color: white;
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
 }
 
 li {
@@ -19,4 +19,9 @@ button {
 img {
   display: block;
   width: 100%;
+}
+
+input {
+  outline: none;
+  border: none;
 }

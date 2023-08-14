@@ -1,0 +1,45 @@
+.wrapper-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 1024px;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.form {
+  font-size: 2rem;
+  display: flex;
+  border: 2px solid #8eff8b;
+  overflow: hidden;
+  width: 300px;
+  height: 30px;
+}
+.welcome-text {
+  font-size: 0.7rem;
+}
+.form-input {
+  background-color: transparent;
+  border: 2px solid #8eff8b;
+  padding: 0.5rem;
+  width: 65%;
+}
+
+.form-button {
+  display: flex;
+  gap: 10px;
+  background-color: rgba(142, 255, 139, 0.5);
+  border: 2px solid #8eff8b;
+  width: 35%;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-button p {
+  font-size: 0.7rem;
+}
+.search-icon {
+  width: 15px;
+}

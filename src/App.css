@@ -59,6 +59,13 @@ body {
     transform: scale(1.2);
   }
 }
+.rick {
+  position: relative;
+  width: 250px;
+  top: -250px;
+  margin: 0 auto;
+  z-index: -9999;
+}
 
 @media (min-width: 600px) {
   .name-img {
@@ -90,5 +97,11 @@ body {
     height: 500px;
     top: -650px;
     right: 50px;
+  }
+
+  .rick {
+    height: 800px;
+    width: 600px;
+    top: -400px;
   }
 }

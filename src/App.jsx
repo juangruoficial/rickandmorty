@@ -83,6 +83,7 @@ function App() {
           <ResidentList residents={currentLocation.residents} />
         </>
       )}
+      <img className="rick" src="/images/rick.png" alt="" />
     </main>
   );
 }

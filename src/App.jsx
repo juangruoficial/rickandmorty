@@ -12,6 +12,26 @@ const LIMIT = 126;
 
 function App() {
   const [currentLocation, setCurrentLocation] = useState(null);
+  const [selectedValue, setSelectedValue] = useState(1);
+  const [isHovered, setIsHovered] = useState(false);
+
+  const colorLetter = isHovered ? "blueletter" : "letter";
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
+
+  const handleInputChange = (event) => {
+    const newCurrentLocation = event.target.value;
+    console.log(newCurrentLocation);
+    fetchedDimension(newCurrentLocation);
+    setSelectedValue(newCurrentLocation);
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -44,11 +64,21 @@ function App() {
 
   return (
     <main className="main">
-      <Background />
+      <Background
+        handleMouseEnter={handleMouseEnter}
+        handleMouseLeave={handleMouseLeave}
+        isHovered={isHovered}
+      />
 
       {currentLocation && (
         <>
-          <LocationForm LIMIT={LIMIT} handleSubmit={handleSubmit} />
+          <LocationForm
+            LIMIT={LIMIT}
+            handleSubmit={handleSubmit}
+            selectedValue={selectedValue}
+            handleInputChange={handleInputChange}
+            isHovered={isHovered}
+          />
           <LocationInfo currentLocation={currentLocation} />
           <ResidentList residents={currentLocation.residents} />
         </>

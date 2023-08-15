@@ -1,12 +1,16 @@
 import { useEffect, useState } from "react";
 import "./styles/LocationForm.css";
-const LocationForm = ({ LIMIT, handleSubmit }) => {
+const LocationForm = ({
+  LIMIT,
+  handleSubmit,
+  selectedValue,
+  handleInputChange,
+  isHovered,
+}) => {
   const [animate, setAnimate] = useState(false);
   const welcomeMessage = "Welcome to rick Universe,lets have some fun";
 
-  useEffect(() => {
-    setAnimate(true);
-  }, []);
+  const colorLetter = isHovered ? "blueletter" : "letter";
 
   return (
     <header className="wrapper-form">
@@ -14,7 +18,7 @@ const LocationForm = ({ LIMIT, handleSubmit }) => {
         {welcomeMessage.split("").map((char, charIndex) => (
           <span
             key={charIndex}
-            className={`letter ${animate ? "appear" : ""}`}
+            className={`letter ${animate ? "appear" : ""} ${colorLetter}`}
             style={{ animationDelay: `${charIndex * 80}ms` }}
           >
             {char === " " ? "\u00A0" : char}
@@ -23,22 +27,38 @@ const LocationForm = ({ LIMIT, handleSubmit }) => {
       </h3>
 
       <form className="form" onSubmit={handleSubmit}>
-        <input
-          min={1}
-          max={LIMIT}
-          type="number"
-          placeholder="type an id location (1 - 126)..."
-          id="newLocation"
-          className="form-input"
-        ></input>
-        <button className="form-button">
-          <p>Search</p>
-          <img
-            className="icons search-icon"
-            src="/images/searchicon.png"
-            alt=""
+        <div className="form-input">
+          <input
+            min={1}
+            max={LIMIT}
+            type="number"
+            placeholder="type an id location (1 - 126)..."
+            id="newLocation"
+            className="form-input input-number"
+          ></input>
+
+          <button className="form-button">
+            <p>Search</p>
+            <img
+              className="icons search-icon"
+              src="/images/searchicon.png"
+              alt=""
+            />
+          </button>
+        </div>
+
+        <p className="range-slicer">Or slide a dimennsion</p>
+        <div className="range-input">
+          <input
+            min={1}
+            max={LIMIT}
+            type="range"
+            value={selectedValue}
+            onChange={handleInputChange}
+            className="form-input range-input custom-slider"
           />
-        </button>
+          ID location {selectedValue}
+        </div>
       </form>
     </header>
   );

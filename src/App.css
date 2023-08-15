@@ -6,6 +6,7 @@ body {
 .vortice {
   margin: 0 auto;
   height: 180px;
+  width: 300px;
 }
 
 .vortice-img {
@@ -16,6 +17,10 @@ body {
 
   margin: 0 auto;
   animation: rotateRight 6s infinite linear;
+}
+
+.vortice:hover {
+  transform: scale(1.2);
 }
 @keyframes rotateRight {
   from {
@@ -74,5 +79,9 @@ body {
     height: 600px;
     top: -650px;
     right: 50px;
+  }
+
+  .vortice {
+    width: 600px;
   }
 }

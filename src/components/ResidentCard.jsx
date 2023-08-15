@@ -1,9 +1,18 @@
-import "./styles/ResidentCard.css";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { useEffect, useState } from "react";
+import "./styles/ResidentCard.css";
+import ModalCard from "./ModalCard";
 
 const ResidentCard = ({ residentUrl }) => {
   const [residentInfo, setResidentInfo] = useState(null);
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const openModal = () => {
+    setModalIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalIsOpen(false);
+  };
 
   const residentStatus = {
     Alive: "alive-status",
@@ -21,7 +30,7 @@ const ResidentCard = ({ residentUrl }) => {
   return (
     <>
       {residentInfo && (
-        <article className="resident-card">
+        <article className="resident-card" onClick={openModal}>
           <header className="wrapper-header">
             <div className="wrapper-resident-image">
               <img
@@ -63,6 +72,12 @@ const ResidentCard = ({ residentUrl }) => {
           </section>
         </article>
       )}
+
+      <ModalCard
+        isOpen={modalIsOpen}
+        onClose={closeModal}
+        residentInfo={residentInfo}
+      />
     </>
   );
 };

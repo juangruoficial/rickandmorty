@@ -6,6 +6,8 @@ import LocationForm from "./components/LocationForm";
 import LocationInfo from "./components/LocationInfo";
 import ResidentList from "./components/ResidentList";
 import useFetchedData from "./Hooks/useFetchedData";
+import Background from "./components/Background";
+import Modal from "react-modal";
 
 const LIMIT = 126;
 
@@ -43,11 +45,7 @@ function App() {
 
   return (
     <main className="main">
-      <div className="vortice">
-        <img className="vortice-img" src="/images/vortice.png" alt="" />
-        <img className="name-img" src="/images/name.png" alt="name" />
-        <img className="ellipse-img" src="/images/ellipse.png" alt="" />
-      </div>
+      <Background />
 
       {currentLocation && (
         <>

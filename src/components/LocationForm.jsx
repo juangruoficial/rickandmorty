@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import "./styles/LocationForm.css";
 const LocationForm = ({ LIMIT, handleSubmit }) => {
   const [animate, setAnimate] = useState(false);
-  const welcomeMessage = "Welcome to rick Universe lets have some fun";
+  const welcomeMessage = "Welcome to rick Universe,lets have some fun";
 
   useEffect(() => {
     setAnimate(true);

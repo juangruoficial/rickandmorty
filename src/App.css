@@ -3,6 +3,19 @@ body {
   background-image: url(/images/starts.png);
 }
 
+body {
+  animation: animateStars 40s infinite;
+}
+
+@keyframes animateStars {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
 .vortice {
   margin: 0 auto;
   height: 180px;

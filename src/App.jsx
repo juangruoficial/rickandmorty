@@ -7,7 +7,6 @@ import LocationInfo from "./components/LocationInfo";
 import ResidentList from "./components/ResidentList";
 import useFetchedData from "./Hooks/useFetchedData";
 import Background from "./components/Background";
-import Modal from "react-modal";
 
 const LIMIT = 126;
 

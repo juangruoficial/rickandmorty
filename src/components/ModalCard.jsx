@@ -46,7 +46,7 @@ const ModalCard = ({ isOpen, onClose, residentInfo }) => {
           </li>
         </ul>
         <button className="modal-close-button" onClick={onClose}>
-          Cerrar
+          Close Card
         </button>
       </section>
     </section>

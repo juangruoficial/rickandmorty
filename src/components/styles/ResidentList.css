@@ -21,8 +21,20 @@
   padding: 0.5rem;
   background-color: transparent;
 }
+
 .pagination-button:hover {
-  transform: scale(1.09);
+  animation: zoomInOut 2s infinite alternate;
+  color: #8eff8b;
+}
+
+@keyframes zoomInOut {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
 }
 
 .activePage {

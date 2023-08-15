@@ -28,8 +28,8 @@ const ResidentList = ({ residents }) => {
   return (
     <>
       <section className="residents-list">
-        {currentResidents.map((resident) => (
-          <ResidentCard key={resident} residentUrl={resident} />
+        {currentResidents.map((resident, index) => (
+          <ResidentCard key={resident} residentUrl={resident} index={index} />
         ))}
       </section>
       <section className="pagination">

@@ -7,6 +7,7 @@ body {
   margin: 0 auto;
   height: 180px;
   width: 300px;
+  cursor: pointer;
 }
 
 .vortice-img {
@@ -40,9 +41,10 @@ body {
 }
 
 .ellipse-img {
-  min-width: 400px;
+  width: 500px;
   height: 400px;
   top: -500px;
+  right: 80px;
   position: relative;
   margin: 0 auto;
   z-index: -9999;
@@ -65,7 +67,9 @@ body {
   }
 
   .vortice {
-    height: 300px;
+    width: 500px;
+    height: 400px;
+    top: -100px;
   }
 
   .vortice-img {
@@ -81,7 +85,10 @@ body {
     right: 50px;
   }
 
-  .vortice {
+  .ellipse-img {
     width: 600px;
+    height: 500px;
+    top: -650px;
+    right: 50px;
   }
 }

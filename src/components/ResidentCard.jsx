@@ -3,7 +3,7 @@ import axios from "axios";
 import "./styles/ResidentCard.css";
 import ModalCard from "./ModalCard";
 
-const ResidentCard = ({ residentUrl }) => {
+const ResidentCard = ({ residentUrl, index }) => {
   const [residentInfo, setResidentInfo] = useState(null);
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const openModal = () => {

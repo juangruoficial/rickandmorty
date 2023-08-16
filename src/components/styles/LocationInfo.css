@@ -7,10 +7,16 @@
   align-items: center;
   gap: 0.8rem;
   padding: 1rem;
-  border: 2px solid #8eff8b;
   margin: 0 auto;
 
   margin-bottom: 2rem;
+
+  border: 2px solid transparent;
+  box-shadow: 0 0 10px 4px#8fff8b;
+}
+
+.location-info:hover {
+  box-shadow: 0 0 20px 6px rgba(0, 255, 0, 1);
 }
 
 .location-info-title {

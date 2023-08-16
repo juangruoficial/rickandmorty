@@ -55,7 +55,7 @@ const LocationForm = ({
             type="range"
             value={selectedValue}
             onChange={handleInputChange}
-            className="form-input range-input custom-slider"
+            className=" range-input custom-slider"
           />
           ID location {selectedValue}
         </div>

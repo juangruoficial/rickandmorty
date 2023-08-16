@@ -1,12 +1,18 @@
 import "./styles/ResidentList.css";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ResidentCard from "./ResidentCard";
 import Pagination from "./Pagination";
 
 const ResidentList = ({ residents }) => {
   const [currentPage, setCurrentPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(1);
+
   const RESIDENTSPERPAGE = 20;
-  const totalPages = Math.ceil(residents.length / RESIDENTSPERPAGE);
+
+  useEffect(() => {
+    setTotalPages(Math.ceil(residents.length / RESIDENTSPERPAGE));
+    setCurrentPage(1);
+  }, [residents]);
 
   const handlePageChange = (pageNumber) => {
     setCurrentPage(pageNumber);

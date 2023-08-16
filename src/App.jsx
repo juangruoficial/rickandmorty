@@ -15,8 +15,6 @@ function App() {
   const [selectedValue, setSelectedValue] = useState(1);
   const [isHovered, setIsHovered] = useState(false);
 
-  const colorLetter = isHovered ? "blueletter" : "letter";
-
   const handleMouseEnter = () => {
     setIsHovered(true);
   };
@@ -26,6 +24,7 @@ function App() {
   };
 
   const handleInputChange = (event) => {
+    if (!event.target.value) return;
     const newCurrentLocation = event.target.value;
     console.log(newCurrentLocation);
     fetchedDimension(newCurrentLocation);
@@ -83,6 +82,7 @@ function App() {
           <ResidentList residents={currentLocation.residents} />
         </>
       )}
+
       <img className="rick" src="/images/rick.png" alt="" />
     </main>
   );
